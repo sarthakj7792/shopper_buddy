@@ -1,0 +1,11 @@
+name: Node
+description: "Migrating from node16 to node 20"
+inputs:
+  _in181: 
+    description: "dont know what it does just trying attempt 1"
+outputs:
+  _out181:
+    description: "this is an output string"
+runs: 
+  using: 'node20'
+  main: 'server/index.js
