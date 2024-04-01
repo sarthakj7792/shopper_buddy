@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
               elevation: 0, iconTheme: IconThemeData(color: Colors.black))),
       onGenerateRoute: (settings) => generateRoute(settings),
       home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ?Provider.of<UserProvider>(context).user.type=='user'? const BottomBar():AdminScreen()
+          ?Provider.of<UserProvider>(context).user.type=='user'? const BottomBar():const AdminScreen()
           : const AuthScreen(),
     );
   }
