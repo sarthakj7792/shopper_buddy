@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:shopper_buddy/common/widgets/bottom_bar.dart';
@@ -79,7 +80,7 @@ class AuthService {
             Navigator.pushNamedAndRemoveUntil(
                 context, BottomBar.routeName, (route) => false);
           });
-      print(res.body);
+      log(res.body);
     } catch (e) {
       showSnackBar(context, e.toString());
     }

@@ -46,18 +46,18 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: any
-  http: any
-  provider: any
-  shared_preferences: any
-  badges: any
+  http: 
+  provider: 
+  shared_preferences: 
+  badges: 
   # badges: ^3.1.2
-  carousel_slider: any
+  carousel_slider: 
   # carousel_slider: ^4.2.1
   # dotted_border: ^2.1.0
-  dotted_border: any
+  dotted_border: 
   # file_picker: ^8.0.0+1
-  file_picker: any
-  cloudinary_public: any
+  file_picker: 
+  cloudinary_public: 
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

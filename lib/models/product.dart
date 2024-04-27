@@ -9,7 +9,7 @@ class Product {
   final List<String> images;
   final String category;
   final String? id;
-  final String? userId;
+
   //rating
 
   Product(
@@ -19,8 +19,7 @@ class Product {
       required this.quantity,
       required this.images,
       required this.category,
-      this.id,
-      this.userId});
+      this.id});
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
@@ -31,14 +30,12 @@ class Product {
       'images': images,
       'category': category,
       'id': id,
-      'userId': userId,
     };
   }
 
   factory Product.fromMap(Map<String, dynamic> map) {
     return Product(
       category: map['category'] as String,
-      userId: map['userId'] != null ? map['userId'] as String : null,
       id: map['_id'] != null ? map['id'] as String : null,
       name: map['name'] as String,
       description: map['description'] as String,

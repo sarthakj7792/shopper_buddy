@@ -4,7 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 
 void showSnackBar(BuildContext context, String text) {
-  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(text)));
+  Builder(
+      builder: ((context) => Builder(
+            builder: (BuildContext context) {
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text(text)));
+              return Container();
+            },
+          )));
 }
 
 Future<List<File>> pickImages() async {
@@ -20,7 +27,7 @@ Future<List<File>> pickImages() async {
       }
     }
   } catch (e) {
-    debugPrint(e.toString() + 'error in pick images');
+    debugPrint('${e}error in pick images');
   }
   return images;
 }

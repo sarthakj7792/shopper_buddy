@@ -5,14 +5,16 @@ import 'package:shopper_buddy/constants/global_variables.dart';
 import 'package:shopper_buddy/features/admin/screens/admin_screen.dart';
 import 'package:shopper_buddy/features/auth/screens/auth_screen.dart';
 import 'package:shopper_buddy/features/auth/services/auth_service.dart';
-import 'package:shopper_buddy/features/home/screens/home_screen.dart';
 import 'package:shopper_buddy/providers/user_provider.dart';
 import 'package:shopper_buddy/router.dart';
 
 void main() {
-  runApp(MultiProvider(
+  runApp(
+    MultiProvider(
       providers: [ChangeNotifierProvider(create: (ctx) => UserProvider())],
-      child: const MyApp()));
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -43,7 +45,9 @@ class _MyAppState extends State<MyApp> {
               elevation: 0, iconTheme: IconThemeData(color: Colors.black))),
       onGenerateRoute: (settings) => generateRoute(settings),
       home: Provider.of<UserProvider>(context).user.token.isNotEmpty
-          ?Provider.of<UserProvider>(context).user.type=='user'? const BottomBar():const AdminScreen()
+          ? Provider.of<UserProvider>(context).user.type == 'user'
+              ? const BottomBar()
+              : const AdminScreen()
           : const AuthScreen(),
     );
   }

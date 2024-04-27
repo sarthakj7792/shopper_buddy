@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:shopper_buddy/features/home/screens/widgets/adress_box.dart';
-import 'package:shopper_buddy/features/home/screens/widgets/deal_of_the_day.dart';
-import 'package:shopper_buddy/features/home/screens/widgets/top_categories.dart';
+import 'package:shopper_buddy/features/home/widgets/adress_box.dart';
+import 'package:shopper_buddy/features/home/widgets/deal_of_the_day.dart';
+import 'package:shopper_buddy/features/home/widgets/top_categories.dart';
 import 'package:shopper_buddy/providers/user_provider.dart';
 import 'package:provider/provider.dart';
 
