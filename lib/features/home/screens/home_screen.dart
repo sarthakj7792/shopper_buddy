@@ -3,9 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:shopper_buddy/features/home/widgets/adress_box.dart';
 import 'package:shopper_buddy/features/home/widgets/deal_of_the_day.dart';
 import 'package:shopper_buddy/features/home/widgets/top_categories.dart';
-import 'package:shopper_buddy/providers/user_provider.dart';
-import 'package:provider/provider.dart';
-
+import 'package:shopper_buddy/features/search/screens/search_screen.dart';
 import '../../../constants/global_variables.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,6 +15,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  void navigateToSearchScreen(String query) {
+    Navigator.pushNamed(context, SearchScreen.routeName, arguments: query);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(10),
                     elevation: 1,
                     child: TextFormField(
+                      onFieldSubmitted: navigateToSearchScreen,
                       decoration: InputDecoration(
                           filled: true,
                           fillColor: Colors.white,
@@ -86,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: const Column(
         children: [
-          AdressBox(),
+          AddressBox(),
           SizedBox(height: 10),
           TopCategories(),
           DealOfTheDay(),

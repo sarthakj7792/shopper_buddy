@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shopper_buddy/providers/user_provider.dart';
 
-class AdressBox extends StatelessWidget {
-  const AdressBox({super.key});
+class AddressBox extends StatelessWidget {
+  const AddressBox({super.key});
 
   @override
   Widget build(BuildContext context) {
