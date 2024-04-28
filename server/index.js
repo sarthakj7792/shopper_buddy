@@ -5,7 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 const adminRouter = require('./routes/admin');
 const productRouter = require('./routes/product');
-const DB = 'mongodb+srv://sarthaksethi5:ugo8me@cluster0.0dg3gh7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const DB = 'enter your mongoDB connection string here';
 //middleware
 app.use(express.json());
 app.use(authRouter);
